@@ -14,16 +14,17 @@ public class InsertSort {
 
         for(int i = 0; i < array.length; i++){
 
-            int target = array[i];
+            int target = array[i]; // 타겟
 
-            int j = i - 1;
+            int j = i - 1;  // 비고할 대상
 
+            // 타겟이 이전 원소보다 크기가 작을때까지 반복
             while (j >= 0 &&target < array[j]) {
-                array[j+1] = array[j];
+                array[j+1] = array[j];  // 비교 대상이 큰 경우 오른쪽으로 밀어냄
                 j--;
             }
 
-            array[j + 1] = target;
+            array[j + 1] = target; // 타겟값 저장
         }
     }
 }
