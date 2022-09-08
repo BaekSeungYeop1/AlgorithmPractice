@@ -11,6 +11,8 @@ public class StringLength {
 
         System.out.println(length(str));
         printChars(str);
+        System.out.println();
+        printCharReverse(str);
 
     }
     private static int length(String str){
@@ -30,4 +32,13 @@ public class StringLength {
             printChars(str.substring(1));
         }
     }
+    private static void printCharReverse(String str){
+        if (str.length()==0)
+            return;
+        else {
+            printChars(str.substring(1));
+            System.out.print(str.charAt(0));
+        }
+    }
+
 }
