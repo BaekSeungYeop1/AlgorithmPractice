@@ -10,6 +10,7 @@ public class StringLength {
         String str = br.readLine();
 
         System.out.println(length(str));
+        printChars(str);
 
     }
     private static int length(String str){
@@ -18,6 +19,15 @@ public class StringLength {
         }
         else {
             return 1 + length(str.substring(1));
+        }
+    }
+    private static void printChars(String str){
+        if (str.length()==0){
+            return;
+        }
+        else {
+            System.out.print(str.charAt(0));
+            printChars(str.substring(1));
         }
     }
 }
